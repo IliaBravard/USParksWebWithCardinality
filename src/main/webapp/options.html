@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<!-- Author: Ilia Garrett Bravard 
+	 Date: 10/05/2022
+	 Course: Java II Programming Course -->
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Transaction Options</title>
+
+<link rel="icon" href="image18.png" type="image/x-icon">
+
+<style>
+body {
+	background-image: url("image3.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: "montserrat";
+}
+
+h1 {
+	color: #ecbb9b;
+	text-align: left;
+	font-size: 60px;
+	padding-left: 25px;
+}
+
+.container {
+	position: absolute;
+	background-color: transparent;
+	width: 375px;
+	left: 68.5%;
+	bottom: 29%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
+	justify-items: center;
+	border-radius: 75px;
+	border-style: none;
+}
+
+div {
+	align-items: center;
+	color: #7696b4;
+	font-size: 25px;
+	text-align: right;
+}
+
+.database {
+	position: absolute;
+	left: 78%;
+	top: 82%;
+}
+
+.add1 {
+	padding-bottom: 0.10rem;
+	position: relative;
+}
+
+.add1::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+	height: 2px;
+	background-color: #ed7d31;
+	transition: width 0.25s ease-out;
+}
+
+.add1:hover::before {
+	width: 100%;
+}
+
+.add1 {
+	padding-top: 19px;
+}
+
+.container input:hover {
+	rotate: 25deg;
+	transition: 0.25s ease-out;
+}
+
+.add:hover {
+	rotate: 35deg;
+	transition: 0.25s ease-out;
+}
+</style>
+</head>
+
+<body>
+	<h1>Choose Your Transaction</h1>
+	
+	<form class="container" action="ViewParksServlet" method="post">
+
+		<div class="add1">Add Parks</div>
+		
+		<div class="add">
+		
+			<a href="insert.html"><img src="image4.png" style="width: 50px; height: 50px"></a>
+			
+		</div>
+
+		<div class="add1">View All Parks</div>
+		<div>
+		
+			<!-- Here I am calling a servlet using a hyperlink -->
+			<input type="image" src="image7.png" alt="Submit">
+			
+		</div>
+
+		<div class="add1">Create Trips</div>
+		
+		<div class="add">
+		
+			<a href="AddParksForPlanServlet"><img src="image14.png" style="width: 41px; height: 41px"></a>
+			
+		</div>
+
+		<div class="add1">View All Trips</div>
+		
+		<div class="add">
+		
+			<a href="ViewPlansServlet"><img src="image13.png" style="width: 43px; height: 43px"></a>
+			
+		</div>
+
+	</form>
+	
+	<img class="database" src="image8.png" style="width: 90px; height: 90px">
+	
+</body>
+</html>
